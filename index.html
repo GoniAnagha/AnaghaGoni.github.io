@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goni Anagha</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="assign.css">
+    <link rel="icon" href="favicon.png">
+</head>
+<body class="lightmode">
+    <div class="topnav">
+        <a href="#about me"><i class="fa fa-fw fa-user"></i> About me</a> 
+        <a href="#education"><i class="fa fa-fw fa-graduation-cap"></i> Education</a> 
+        <a href="#achievements"><i class="fa fa-fw fa-trophy"></i> Achievements</a> 
+        <a href="#skills"><i class="fa fa-fw fa-music"></i>Skills</a>
+        <a href="#hobbies"><i class="fa fa-fw fa-paint-brush"></i>Hobbies</a>
+        <a href="#blog"><i class="fa fa-fw fa-book"></i> Blog</a>
+      </div>
+      <h1 class="heading1" id="about me">About me</h1>
+      <img src="profile.jpeg" alt="no image">
+      <p class="image">Hi! This is Anagha.I am an undergraduate student at <a href="https://www.iiit.ac.in/" alt="IIIT hyderabad">IIIT HYDERABAD</a> in <a href="https://www.iiit.ac.in/academics/curriculum/undergraduate/cse/" alt="CSE">CSE</a> branch.<br>I really want to work on improving my coding skills and work on projects which help us solve real time problems.<br>I am interested to know about cybersecurity and stuff related to it.<br><br>you can contact me here:</p>
+      <div class="social">
+      <a href="mailto:goni.anagha@students.iiit.ac.in">goni.anagha@students.iiit.ac.in</a>
+      </div>
+      <br><br><br><br>
+      <p class="a" id="education" ><b><i>Education</i></b><br>->I completed my schooling in the year 2021 from Sri chaitanya school,Anantapuram with subjects biological science and physical science and social.<br>->I completed my intermediate education from BOARD of Intermediate Education,AP with subjects maths, physics and chemistry.</p>
+      <p class="b" id="achievements"><b><i>Achievements</i></b><br>#Completed my 10th class with top score.<br>#Completed my Intermediate with A grade(97.9%).</p>
+      <br><br>
+      <p class="a" id="skills"><b><i>Skills</i></b><br>~I am trying to improve my coding skills in c, html, css,python and javasvript.<br>~I learnt carnatic music for 4 years and have decent pratice in singing.</p>
+      <p class="b" id="hobbies"><b><i>Hobbies</i></b><br>##Generally, I find peace in listening music and singing especially slow and melodic music.<br>##I also enjoy music played along with drums and musical pads.<br>##I like reading books and playing badminton.<br>##I love capturing astonishing photos of nature.</p>
+      <div id="blog" class="bl"><a href="blogs.html" target="_blank">Blogs</a></div><br><br>
+      <a href="Assignment 1.pdf" target="_blank" style="font-size: 30px;">click here to view assignment 1 document</a><br><br><br>
+      <button onclick="toggleMode()" style="font-size:25px;">
+        <i class="fa fa-adjust"></i> click to toggle
+    </button>
+
+    <script>
+        function toggleMode() {
+            var body = document.body;
+            body.classList.toggle("darkmode");
+            body.classList.toggle("lightmode");
+            var currentMode = body.classList.contains("darkmode") ? "dark" : "light";
+            localStorage.setItem("mode", currentMode);
+        }
+        var savedMode = localStorage.getItem("mode");
+        if (savedMode === "dark") {
+            toggleMode();
+        }
+    </script>
+</body>
+</html>

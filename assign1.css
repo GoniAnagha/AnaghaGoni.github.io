@@ -1,0 +1,31 @@
+body {
+    background-image: url('B.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.blog1, .blog2 {
+    animation: slideInLeft 2s ease-out;
+    width: 20%;
+    height: 200px;
+    border-radius: 15px;
+    font-size: 35px;
+    background-color: rgb(187, 221, 240); 
+    color: rgb(0, 0, 0); 
+}
+
+ .blog1 {
+    margin-left: 15%;
+}
+
+.blog2 {
+    margin-left: 65%;
+}
+
+
+
+@keyframes slideInLeft {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0); }
+}

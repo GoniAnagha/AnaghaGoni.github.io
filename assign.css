@@ -1,0 +1,190 @@
+body.lightmode {
+        background-image: url('B.jpeg');
+        background-repeat: no-repeat;
+        background-size:cover;
+}
+body.darkmode{
+       background-color: black;
+}
+
+body.darkmode .heading1,
+body.darkmode .a,
+body.darkmode .b,
+body.darkmode .topnav a {
+    color: white; 
+}
+body.darkmode .topnav a:hover{
+        background-color: rgb(0, 0, 0);
+        color: yellow;
+}
+body.darkmode .image{
+        margin-left: 27%;
+        margin-top: 5%;
+        font-size: large;
+        color: white;
+}
+
+body.darkmode .heading1{
+        color:white;
+        margin-left: 20%;
+    font-family: cursive;
+    font-size: 50px;
+    animation: slideInLeft 2s ease-out;
+}
+body.darkmode .a,
+body.darkmode .b {
+    background-color: rgb(128, 126, 126); 
+}
+body.darkmode .bl{
+        color:white;
+}
+body.darkmode .d{
+        color:white;
+}
+img{
+        float:right;
+        margin-top: 1%;
+        margin-right:18%;
+        width:400px;
+    }
+
+.heading1 {
+    margin-left: 20%;
+    font-family: cursive;
+    font-size: 50px;
+    animation: slideInLeft 2s ease-out;
+}
+.c {
+        background-color:rgb(248, 227, 122); 
+        color:black;
+        width:100px;
+        height: 50px;
+        margin-left: 1%;
+}
+.d {
+        font-size: 30px; 
+        font-family: cursive; 
+        animation: fadeInOut 2s ease-in-out infinite alternate;   
+}
+.a {
+        animation: slideInLeft 2s ease-out;
+        background-color: rgb(187, 221, 240);
+        color: rgb(0, 0, 0);
+        float:left;
+        width:40%;
+        margin-left: 1%;
+        height:350px;
+        border-radius: 15px;
+        font-size: 25px;
+    }
+.b {
+        animation: slideInLeft 2s ease-out;
+        background-color: rgb(187, 221, 239);
+        color: rgb(0, 0, 0);
+        margin-left:55%;
+        width:40%;
+        height:350px;
+        border-radius: 15px;
+        font-size: 25px;
+    }
+.a b,
+.b b{
+        animation: fadeInOut 2s ease-in-out infinite alternate;
+}
+.image{
+        margin-left: 27%;
+        margin-top: 5%;
+        font-size: large;
+    }
+
+.data{
+        background-color:rgb(0, 0, 0);
+        margin-top:30%;
+        margin-left:30%;
+        width:600px;
+        height: 500px;
+        border-radius: 15px;
+}
+.topnav {
+        overflow: hidden;
+        margin-top: 3%;
+ }
+.topnav a{
+        text-align: center;
+        text-decoration: none;
+        font-family: cursive;
+        color: rgb(22, 22, 21);
+        font-size: 35px;
+        padding: 15px 50px;
+}
+.topnav a:hover{
+        background-color: rgb(6, 6, 6);
+        color: yellow;
+}
+.social{
+     size: large;
+   justify-content: center;
+   margin-left: 30%;;
+}
+.bl {
+        text-align: center; 
+        font-size: 50px; 
+        font-family: cursive; 
+        animation: fadeInOut 2s ease-in-out infinite alternate;
+}
+
+@keyframes slideInLeft {
+        0% { transform: translateX(-100%); }
+        100% { transform: translateX(0); }
+}
+
+@keyframes fadeInOut {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+}
+
+@media screen and (max-width: 768px) {
+        .heading1 {
+                font-size: 40px;
+                margin-left: 10%;
+            }
+            .a, .b {
+                width: 90%;
+                height:400px;
+                margin-left: 5%;
+                margin-bottom: 20px;
+                clear: both; 
+            }
+            .topnav a{
+                    font-size: 18.5px;
+            }
+            .image {
+                margin-left: 10%;
+            }
+            img {
+                width: 100%;
+                margin-right: 0;
+                display: block; 
+            }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+        .heading1 {
+                font-size: 40px;
+                margin-left: 10%;
+            }
+            .a, .b {
+                width: 90%;
+                margin-left: 5%;
+                margin-bottom: 20px;
+                clear: both; 
+            }
+            .image {
+                margin-left: 10%;
+            }
+            img {
+                width: 100%;
+                margin-right: 0;
+                display: block; 
+            }
+}

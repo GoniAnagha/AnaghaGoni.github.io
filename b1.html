@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Blog 1</title>
+</head>
+<body>
+    <h2 style="text-align:center;">Music</h2>
+    <p style="font-size:25px;">Research into music and emotion seeks to understand the psychological relationship between human affect and music. The field, a branch of music psychology, covers numerous areas of study, including the nature of emotional reactions to music, how characteristics of the listener may determine which emotions are felt, and which components of a musical composition or performance may elicit certain reactions.<br>The research draws upon, and has significant implications for, such areas as philosophy, musicology, music therapy, music theory, and aesthetics, as well as the acts of musical composition and of musical performance like a concert. </p>
+    
+    <button onclick="likeBlog('likeCount1')" class="like-button"><i class="far fa-thumbs-up"></i></button>
+    <div class="like-counter" style="background-color: white; margin-left:1%; width:80px">Likes: <span id="likeCount1">0</span></div><br>
+    <div class="comments1">
+        <textarea id="comment1" placeholder="Write a comment..."></textarea>
+        <button onclick="addComment('comment1')">Post Comment</button>
+    </div>
+    
+    <p style="font-size:30px">Comments</p>
+    <div id="commentList1"></div>
+
+    <script>
+        function likeBlog(likeCountId) {
+            var likeCount = document.getElementById(likeCountId);
+            var count = parseInt(likeCount.textContent) || 0;
+            count++;
+            likeCount.textContent = count;
+            localStorage.setItem(likeCountId, count);
+        }
+
+        function addComment(commentId) {
+            var commentInput = document.getElementById(commentId);
+            var comment = commentInput.value.trim();
+            if (comment !== '') {
+                var comments = JSON.parse(localStorage.getItem('comments1')) || [];
+                comments.push(comment);
+                localStorage.setItem('comments1', JSON.stringify(comments));
+                displayComments();
+                alert('Comment posted successfully!');
+                commentInput.value = '';
+            } else {
+                alert('Please enter a comment!');
+            }
+        }
+
+        function displayComments() {
+            var comments = JSON.parse(localStorage.getItem('comments1')) || [];
+            var commentList = document.getElementById('commentList1');
+            commentList.innerHTML = ''; 
+            comments.forEach(function(comment, index) {
+                var commentItem = document.createElement('div');
+                commentItem.textContent = (index + 1) + '. ' + comment;
+                commentList.appendChild(commentItem);
+            });
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            var likeCount = localStorage.getItem('likeCount1');
+            if (likeCount) {
+                document.getElementById('likeCount1').textContent = likeCount;
+            }
+
+            displayComments();
+        });
+    </script>
+</body>
+</html>
